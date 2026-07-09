@@ -18,6 +18,51 @@ A Vellum assistant plugin for tennis players: match journal, drill session build
 | `tennis_find_courts` | Find courts near a location |
 | `tennis_progress` | Stats, streaks, trends, head-to-head |
 
+## How to use
+
+Once installed, just talk to your assistant. No commands to memorize.
+
+**Log a match:**
+
+Tell your assistant about the match and it goes into the journal:
+
+- "played Sasha today, won 6-4 6-3 on the hard courts, windy as hell"
+- "lost to Jamie 4-6 6-7 on clay. my second serve fell apart but the slice was working"
+
+The more you mention, the richer the journal: surface, conditions, what
+worked, what broke down, and anything you noticed about the opponent
+("she can't handle high balls to the backhand"). Rate your own play 1-5
+if you want a form trend over time.
+
+**Get a practice session:**
+
+Tell it what you want to work on and how long you have:
+
+- "give me a 30 minute serve session"
+- "45 minutes to work on backhand and net play"
+- "I only have 20 minutes and my footwork is trash"
+
+You get a timed plan: warmup, main drills matched to your level with a
+progression for when each one gets easy, and a match-play finisher.
+Sessions are logged to practice history automatically.
+
+**Find courts:**
+
+- "where can I play tennis near Williamsburg?"
+- "any courts with lights within 5k of me?"
+
+Results include distance, surface, number of courts, lighting, whether
+access is private or free, and a map link.
+
+**Check your progress:**
+
+- "how's my tennis going?" gets win rate, streak, recent form, splits by
+  surface and conditions, and your practice focus breakdown
+- "what's my record against Sasha?" gets the head-to-head with your
+  scouting notes from previous matches, useful right before a rematch
+- "what should I practice?" and the assistant looks at what broke down
+  in your recent matches and builds a session around it
+
 ## Install
 
 ```
