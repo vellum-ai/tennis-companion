@@ -1,0 +1,10 @@
+{
+  "name": "tennis-companion",
+  "version": "0.1.0",
+  "description": "Tennis journal, drill session builder, court finder, and progress tracking.",
+  "type": "module",
+  "peerDependencies": {
+    "@vellumai/plugin-api": "^0.10.0"
+  },
+  "vellum": {}
+}
