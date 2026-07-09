@@ -1,15 +1,16 @@
 // tools/tennis_progress.ts
-import type { ToolDefinition } from "@vellumai/plugin-api";
+
 import { readCsvObjects, MATCHES_CSV, SESSIONS_CSV } from "../src/storage.ts";
 
 function pct(w: number, n: number): string {
   return n === 0 ? "-" : `${Math.round((w / n) * 100)}%`;
 }
 
-const tool: ToolDefinition = {
+const tool = {
   description:
     "Show tennis progress from the match journal and practice history: win rate overall, by surface and conditions, current streak, recent form, per-opponent records, and practice focus breakdown. Use when the user asks how their tennis is going.",
-  parameters: {
+  defaultRiskLevel: "low" as const,
+  input_schema: {
     type: "object",
     properties: {
       opponent: {

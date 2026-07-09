@@ -1,5 +1,5 @@
 // tools/tennis_log_match.ts
-import type { ToolDefinition } from "@vellumai/plugin-api";
+
 import {
   appendCsv,
   ensureCsv,
@@ -7,10 +7,11 @@ import {
   MATCHES_HEADERS,
 } from "../src/storage.ts";
 
-const tool: ToolDefinition = {
+const tool = {
   description:
     "Log a tennis match to the journal: opponent, result, score, surface, conditions, what worked, what did not, and opponent tendencies. Use whenever the user reports playing a tennis match.",
-  parameters: {
+  defaultRiskLevel: "low" as const,
+  input_schema: {
     type: "object",
     properties: {
       opponent: { type: "string", description: "Opponent's name or identifier." },

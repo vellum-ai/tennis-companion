@@ -1,5 +1,5 @@
 // tools/tennis_drill_session.ts
-import type { ToolDefinition } from "@vellumai/plugin-api";
+
 import { buildSession, parseFocus, CATEGORIES } from "../src/drills.ts";
 import {
   appendCsv,
@@ -9,10 +9,11 @@ import {
   SESSIONS_HEADERS,
 } from "../src/storage.ts";
 
-const tool: ToolDefinition = {
+const tool = {
   description:
     "Generate a structured tennis drill session (default 30 minutes) for a chosen focus like serve, backhand, net play, footwork, or consistency. Includes warmup, main drills with progressions, and a match-play finisher. Logs the session to practice history.",
-  parameters: {
+  defaultRiskLevel: "low" as const,
+  input_schema: {
     type: "object",
     properties: {
       focus: {

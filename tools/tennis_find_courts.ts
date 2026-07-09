@@ -1,12 +1,13 @@
 // tools/tennis_find_courts.ts
-import type { ToolDefinition } from "@vellumai/plugin-api";
+
 import { geocode, findCourts } from "../src/courts.ts";
 import { getConfig } from "../src/storage.ts";
 
-const tool: ToolDefinition = {
+const tool = {
   description:
     "Find tennis courts near a location using OpenStreetMap data. Returns names, distance, surface, lighting, and access info. Use when the user asks where to play tennis nearby.",
-  parameters: {
+  defaultRiskLevel: "low" as const,
+  input_schema: {
     type: "object",
     properties: {
       location: {
